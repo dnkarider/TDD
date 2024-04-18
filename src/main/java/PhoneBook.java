@@ -23,8 +23,11 @@ public class PhoneBook {
         return name;
     }
     public String findByName(String name){
-
-        return null;
+        String number = "Такого имени нет в базе";
+        if(book.containsKey(name)){
+            number = book.get(name);
+        }
+        return number;
     }
     public static PhoneBook getInstance(){
         if(PHONEBOOK == null){

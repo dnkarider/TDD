@@ -31,6 +31,10 @@ public class PhoneBook {
         return number;
     }
     public void printAllNames(){
+        Set<Map.Entry<String, String>> entrySet = book.entrySet();
+        for(Map.Entry<String, String> pair : entrySet){
+            System.out.print(pair.getKey() + " ");
+        }
     }
     public static PhoneBook getInstance(){
         if(PHONEBOOK == null){

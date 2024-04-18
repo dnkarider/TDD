@@ -8,4 +8,11 @@ public class PhoneBookTest {
         phoneBook.add("Michael", "+78228828828");
         Assertions.assertTrue(phoneBook.add("Michael", "+78228828828") == 1);
     }
+    @Test
+    public void testFindByNumber(){
+        PhoneBook phoneBook = PhoneBook.getInstance();
+        phoneBook.add("Michael", "+78020200299");
+        phoneBook.add("Хасбула", "+79156666666");
+        Assertions.assertTrue(phoneBook.findByNumber("79156666666").equals("Хасбула"));
+    }
 }

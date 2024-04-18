@@ -15,4 +15,11 @@ public class PhoneBookTest {
         phoneBook.add("Хасбула", "+79156666666");
         Assertions.assertEquals("Хасбула", phoneBook.findByNumber("+79156666666"));
     }
+    @Test
+    public void testFindByName(){
+        PhoneBook phoneBook = PhoneBook.getInstance();
+        phoneBook.add("Michael", "+78020200299");
+        phoneBook.add("Хасбула", "+79156666666");
+        Assertions.assertEquals("+79156666666", phoneBook.findByName("Хасбула"));
+    }
 }

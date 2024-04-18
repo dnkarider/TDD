@@ -22,6 +22,10 @@ public class PhoneBook {
         }
         return name;
     }
+    public String findByName(String name){
+
+        return null;
+    }
     public static PhoneBook getInstance(){
         if(PHONEBOOK == null){
             synchronized (PhoneBook.class){

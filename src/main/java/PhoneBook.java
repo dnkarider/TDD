@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -28,6 +29,8 @@ public class PhoneBook {
             number = book.get(name);
         }
         return number;
+    }
+    public void printAllNames(){
     }
     public static PhoneBook getInstance(){
         if(PHONEBOOK == null){
